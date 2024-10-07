@@ -1,46 +1,22 @@
-# Motion
+项目概述
+Motion 是一个 Android 端的应用程序，用于记录跑步运动的轨迹和数据。该应用通过集成高德地图 API 展示运动轨迹，使用 Realm 数据库存储用户的运动数据，包括运动日期、距离、时长、消耗卡路里等。应用还包含用户的登录注册功能，支持运动数据的展示和分析。
 
-## Android端记录跑步运动轨迹数据的App
+功能需求
+运动轨迹记录：基于高德地图 API，实时追踪用户的运动轨迹，并将运动路径绘制在地图上。
+运动数据统计：记录每次运动的时间、距离、速度和消耗的卡路里。
+运动日历：展示用户每日的运动记录，统计某一时间段的运动情况。
+用户登录/注册：模拟用户登录、注册功能，所有数据存储在本地的 Realm 数据库中。
+运动结果：展示跑步结束后的数据统计，包括跑步距离、时间、速度等，并提供数据分享选项。
+运动记录展示：保存和展示每次运动的历史数据，用户可以回顾和分析自己的运动历史。
 
-  本项目功能实现了跑步运动轨迹、运动数据（运动日期记录、单个日期运动次数、每次运动的基本数据（运动距离、时长、消耗、速度等））。地图及运动轨迹展示使用的高德地图（APPKey需要替换为自己创建的,可参考高德官方文档进行改进）；运动相关数据使用Realm数据库保存，登录注册功能也是由本地Realm数据库模拟完成；运动日历展示使用开源框架，可根据需求自行修改。
-  
-  运动轨迹处理修改优化可参考高德官方文档 : https://lbs.amap.com/dev/demo/path-record#Android
-  
-  界面参考自IOS开源项目:YSRun（项目地址：https://github.com/moshuqi/YSRun ）
-  
-  代码简易，欢迎来指点交流！觉得还可以，给个Star^_^
-  
-### 扫码下载APK
-<img width="180" height="180" src="https://github.com/aqx1991/Motion/blob/master/ScreenShot/apk_dl.png"/>
-
-## 更新
-### 更新：
-    * 1.修改定位方式，解决坐标偏移问题；
-    * 2.修改轨迹绘制方式，轨迹平滑优化；
-    * 3.修改轨迹数据格式，存取数据优化。
-  
-## 界面预览
-### 首页运动日历
-<img width="365" height="640" src="https://github.com/aqx1991/Motion/blob/master/ScreenShot/%E9%A6%96%E9%A1%B5.jpg"/>
-
-### 开始运动
-<img width="365" height="640" src="https://github.com/aqx1991/Motion/blob/master/ScreenShot/%E5%BC%80%E5%A7%8B%E8%BF%90%E5%8A%A8.jpg"/>
-
-### 运动倒计时
-<img width="365" height="640" src="https://github.com/aqx1991/Motion/blob/master/ScreenShot/%E8%BF%90%E5%8A%A8%E5%80%92%E8%AE%A1%E6%97%B6.jpg"/>
-
-### 地图模式
-<img width="365" height="640" src="https://github.com/aqx1991/Motion/blob/master/ScreenShot/%E8%BF%90%E5%8A%A8-%E5%9C%B0%E5%9B%BE%E6%A8%A1%E5%BC%8F.png"/>
-
-### 地图模式-暂停
-<img width="365" height="640" src="https://github.com/aqx1991/Motion/blob/master/ScreenShot/%E8%BF%90%E5%8A%A8-%E5%9C%B0%E5%9B%BE%E6%A8%A1%E5%BC%8F_%E6%9A%82%E5%81%9C.png"/>
-
-### 跑步模式
-<img width="365" height="640" src="https://github.com/aqx1991/Motion/blob/master/ScreenShot/%E8%BF%90%E5%8A%A8-%E8%B7%91%E6%AD%A5%E6%A8%A1%E5%BC%8F.png"/>
-
-### 运动结果
-<img width="365" height="640" src="https://github.com/aqx1991/Motion/blob/master/ScreenShot/%E8%BF%90%E5%8A%A8%E7%BB%93%E6%9E%9C.png"/>
-
-### 运动记录
-<img width="365" height="640" src="https://github.com/aqx1991/Motion/blob/master/ScreenShot/%E8%BF%90%E5%8A%A8%E8%AE%B0%E5%BD%95.png"/>
-
+使用说明
+1. 登录与注册
+用户可以使用自定义的登录和注册功能，该功能基于 Realm 数据库存储用户信息。
+初次运行时，用户需注册账号，应用将在本地保存用户的登录信息。
+2. 开始运动
+点击主界面中的“开始运动”按钮，应用将开启 GPS 定位并开始记录用户的运动轨迹。
+用户可以在地图上实时查看自己的运动路径。
+3. 结束运动
+结束运动后，应用会展示详细的数据统计，包括运动时间、运动距离、平均速度等。
+4. 查看历史记录
+用户可以通过“运动记录”页面查看之前的所有运动历史，并进行数据分析。
